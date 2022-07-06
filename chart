@@ -1,35 +1,136 @@
 <html>
    <body>
        <div class="ciclegraph">
- 
+        <div>
+          <img src = "/Users/rishabbanthiya/curly-sniffle/team_vector.png" style = " 
+          width: 40%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);">
+          <p style = " 
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: sans-serif;
+          color: linen;"> Model 360 </p>
+        </div>
+      
+
+
            <div class="circle">
-           <p class = "button-text">
-             Model Catalog
-           </p></div>
-           <div class="circle"> <p class = "button-text">
-             Model ROI
-           </p></div>
-           <div class="circle">  <p class = "button-text">
-             Modeling Capacity
-           </p> </div>
-           <div class="circle"><p class = "button-text">
-             Model Metrics
-           </p></div>
-           <div class="circle"><p class = "button-text">
-             Gap Analysis
-           </p></div>
-           <div class="circle"><p class = "button-text">
-             Knowledge Deployment
-           </p></div>
-           <div class="circle"><p class = "button-text">
-            Modeling Analysis
-           </p></div>
-           <div class="circle"><p class = "button-text">
-             Model Deployment
-           </p></div>
-         </div>
+                <img src = "/Users/rishabbanthiya/curly-sniffle/ModelCatalog.svg">  
+                <div class="tooltip"> <p class = "button-text">
+                  Model Catalog
+                 </p>
+                  <span class="tooltiptext"> A catalog of all the models in PSSM with functional areas, platforms, SMEs
+                  </span>
+                </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/ModelROI.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Model ROI
+             </p>
+              <span class="tooltiptext"> Impact of Models in reducing cost, cycle time, and experimental need
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/ModelCatalog.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Modelling Capacity
+             </p>
+              <span class="tooltiptext"> Modeling capacity across functional areas, PSSM lines, integration into the workflow
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/ModelMetrics.svg">
+            <div class="tooltip"> <p class = "button-text">
+              Model Metrics
+             </p>
+              <span class="tooltiptext"> Modeling requirements, uses, model maturity, validation, inclusion in the submission
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/GapAnalysis.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Gap Analysis
+             </p>
+              <span class="tooltiptext"> Modeling gap in functional areas, gap in skill set, gap in resources such as model deployment
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/KnowledgeManagement.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Knowledge Deployment
+             </p>
+              <span class="tooltiptext"> Collecting, storing and
+                sharing modeling information
+                across PSSM lines
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/Ecosystem.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Modelling Ecosystem
+             </p>
+              <span class="tooltiptext"> Data mapping for each model, model connection to databases
+              </span>
+            </div>
+          </div>
+
+          <div class="circle">
+            <img src = "/Users/rishabbanthiya/curly-sniffle/ModelDeploymeny.svg">  
+            <div class="tooltip"> <p class = "button-text">
+              Model Deployment
+             </p>
+              <span class="tooltiptext"> List of model deployment platform, a decision tree for selecting model deployment platform
+              </span>
+            </div>
+          </div>
+
    </body>
    <style>
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color:lightslategray ;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  font-family: sans-serif;
+  
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.7;
+}     
       
 .ciclegraph {
  position: relative;
@@ -53,8 +154,8 @@
  position: absolute;
  top: 50%;
  left: 50%;
- width: 100px;
- height: 100px;
+ width: 135px;
+ height: 135px;
  margin: calc(-100px / 2);
  background: #1aa3ff;
  border-radius: 50%;
@@ -69,7 +170,8 @@
 .ciclegraph .circle .button-text {
  font-family:sans-serif;
  color:white;
- padding:1px;
+ padding:0.1px;
+ font-size: 13px;
 }
    </style>
    <script>
@@ -86,4 +188,5 @@ document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
    </script>
 </html>
  
+
 
