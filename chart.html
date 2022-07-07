@@ -1,29 +1,25 @@
 <html>
    <body>
        <div class="ciclegraph">
+         <!-- Center Image and Text -->
         <div>
-          <img src = "/Users/rishabbanthiya/curly-sniffle/team_vector.png" style = " 
+          <img src = "/Users/rishabbanthiya/curly-sniffle/Picture1.png" style = " 
           width: 40%;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);">
-          <p style = " 
-          position: absolute;
-          top: 60%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-family: sans-serif;
-          color: linen;"> Model 360 </p>
         </div>
       
 
-
-           <div class="circle">
-                <img src = "/Users/rishabbanthiya/curly-sniffle/ModelCatalog.svg">  
-                <div class="tooltip"> <p class = "button-text">
+        <!-- Each individual circle -->
+           <div class="circle" style="display: flex;">
+                <img src = "/Users/rishabbanthiya/curly-sniffle/ModelCatalog.svg">   
+                <!-- Text which triggers text box on hover -->
+                <div class="tooltip" style="display: block;"> <p class = "button-text" >
                   Model Catalog
                  </p>
+                   <!-- Text that hovers -->
                   <span class="tooltiptext"> A catalog of all the models in PSSM with functional areas, platforms, SMEs
                   </span>
                 </div>
@@ -104,6 +100,7 @@
    </body>
    <style>
 
+/* Styling for hovering text box */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -111,8 +108,9 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 240px;
-  background-color:lightslategray ;
+  width: 320px;
+  height: 100px;
+  background-color:#007a78 ;
   color: #fff;
   border-radius: 6px;
   padding: 10px 0;
@@ -122,16 +120,18 @@
   left: 50%;
   margin-left: -60px;
   font-family: sans-serif;
-  
+    
   opacity: 0;
   transition: opacity 0.5s;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  opacity: 0.7;
+  opacity: 1;
 }     
-      
+
+/* Styling for circles in the graph */
+
 .ciclegraph {
  position: relative;
  width: 500px;
@@ -156,8 +156,8 @@
  left: 50%;
  width: 135px;
  height: 135px;
- margin: calc(-100px / 2);
- background: #1aa3ff;
+ margin: calc(-135px / 2);
+ background:#007a78;
  border-radius: 50%;
  text-align: center;
  align-items: center;
@@ -165,6 +165,10 @@
  display: flex;
  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
  
+}
+
+.ciclegraph .circle:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
  
 .ciclegraph .circle .button-text {
@@ -176,6 +180,7 @@
    </style>
    <script>
  
+// Automatically adjust submenu circles
 document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
  let circles = ciclegraph.querySelectorAll( '.circle' )
  let angle = 360-90, dangle = 360 / circles.length
@@ -188,5 +193,4 @@ document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
    </script>
 </html>
  
-
 
